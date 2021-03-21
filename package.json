@@ -11,11 +11,8 @@
   "private": false,
   "license": "Apache-2.0",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "files": [
-    "lib"
+    "*"
   ],
   "dependencies": {
     "@devexpress/dx-core": "^2.7.5",
