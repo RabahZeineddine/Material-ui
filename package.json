@@ -48,7 +48,7 @@
     "lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx}'",
     "clean": "rm -rf ./lib",
     "clean:storybook": "rm -rf ./storybook-static",
-    "prebuild": "yarn clean",
+    "prebuild": "npm run clean",
     "build": "tsc --build \"./tsconfig.json\"",
     "postbuild": "npm shrinkwrap",
     "predeploy-storybook": "npm run clean:storybook && npm run build-storybook",
