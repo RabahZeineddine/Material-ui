@@ -58,7 +58,7 @@
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s public",
     "copy-files": "",
-    "semantic-release": "npm run build && semantic-release",
+    "semantic-release": "npm install && npm run build && semantic-release",
     "postversion": "cp -r package.json .. && cp -r npm-shrinkwrap.json .."
   },
   "eslintConfig": {
