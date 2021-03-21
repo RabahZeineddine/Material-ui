@@ -48,7 +48,7 @@
     "prebuild": "yarn run clean && yarn install",
     "build": "tsc --build \"./tsconfig.json\"",
     "postbuild": "yarn run copy:build",
-    "copy:build": "copyfiles package.json ./lib",
+    "copy:build": "copyfiles package.json README.md ./lib",
     "predeploy-storybook": "yarn run clean:storybook && yarn run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook",
