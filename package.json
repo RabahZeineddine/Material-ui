@@ -10,7 +10,7 @@
   ],
   "private": false,
   "license": "Apache-2.0",
-  "main": "lib/src/index.js",
+  "main": "index.js",
   "directories": {
     "lib": "lib"
   },
@@ -33,6 +33,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "copyfiles": "^2.4.1",
     "file-saver": "^2.0.5",
     "moment": "^2.29.1",
     "react": "^17.0.1",
@@ -50,13 +51,14 @@
     "clean:storybook": "rm -rf ./storybook-static",
     "prebuild": "npm run clean",
     "build": "tsc --build \"./tsconfig.json\"",
-    "postbuild": "npm shrinkwrap",
+    "postbuild": "npm shrinkwrap && npm run copy:build",
+    "copy:build": "copyfiles package.json npm-shrinkwrap.json ./lib",
     "predeploy-storybook": "npm run clean:storybook && npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s public",
     "copy-files": "",
-    "semantic-release": "semantic-release",
+    "semantic-release": "npm run build && semantic-release",
     "postversion": "cp -r package.json .. && cp -r npm-shrinkwrap.json .."
   },
   "eslintConfig": {
