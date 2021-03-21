@@ -48,7 +48,7 @@
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx}'",
     "clean:storybook": "rm -rf ./storybook-static",
-    "prebuild": "npm run clean && yarn install",
+    "prebuild": "yarn run clean && yarn install",
     "build": "tsc --build \"./tsconfig.json\"",
     "postbuild": "yarn run copy:build",
     "copy:build": "copyfiles package.json ./lib",
@@ -57,7 +57,7 @@
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s public",
     "copy-files": "",
-    "semantic-release": "yarn run clean && yarn install && yarn run build && semantic-release",
+    "semantic-release": "yarn run build && semantic-release",
     "clean": "rm -rf ./lib && rm -rf ./node_modules && rm -rf ./storybook-static && rm -rf ./yarn.lock"
   },
   "eslintConfig": {
