@@ -15,5 +15,6 @@ jobs:
           branch: main
         provider: script
         cleanup: true
+        skip_cleanup: true
         script:
           - yarn run semantic-release
