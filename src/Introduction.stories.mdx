@@ -4,19 +4,19 @@ import { Meta } from "@storybook/addon-docs/blocks";
 
 # Material-ui custom components
 
-Check the sidebar menu to view each component with its props and configuration
-
-For more information check the [Github repository](https://github.com/RabahZeineddine/Material-ui.git)
-
-This project offers [Material-ui](https://material-ui.com/) custom components
+This project offers some custom components of [Material-ui](https://material-ui.com/)
 
 ## Why a package was created
 
+As I use [Material-ui](https://material-ui.com/) in my projects, I decided to create this package that offers Material-ui custom components
 
 ## What problem the package solves
 
+Reuse custom components
 
 ## How the package solves the problem
+
+It handles some components of Material-ui and customize it making it easer to use
 
 ## All valid configurations/props of the package
 
@@ -24,4 +24,19 @@ This project offers [Material-ui](https://material-ui.com/) custom components
 
 #### Table
 
-> For more information check the [Table Documentation](src/components/Table.stories.tsx?path=/docs/textfield--default)
+This table component is based on [React Grid](https://devexpress.github.io/devextreme-reactive/react/grid/docs/guides/getting-started/)
+
+```TSX
+import { Table } from '@rabahzeineddine/Material-ui'
+
+<Table
+    columns={columns}
+    rows={rows}
+/>
+```
+
+> For more information check the [Table Documentation](src/components/Table.stories.tsx?path=/docs/table--default)
+
+## Github repository
+
+Check the [Github repository](https://github.com/RabahZeineddine/Material-ui.git)

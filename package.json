@@ -9,7 +9,7 @@
     "Table"
   ],
   "private": false,
-  "license": "MIT",
+  "license": "Apache-2.0",
   "main": "lib/src/index.js",
   "directories": {
     "lib": "lib"
@@ -47,12 +47,14 @@
     "lint": "eslint './src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint --fix './src/**/*.{js,jsx,ts,tsx}'",
     "clean": "rm -rf ./lib",
+    "clean:storybook": "rm -rf ./storybook-static",
     "prebuild": "yarn clean",
     "build": "tsc --build \"./tsconfig.json\"",
     "postbuild": "yarn run copy-files",
-    "eject": "react-scripts eject",
+    "predeploy-storybook": "npm run clean:storybook && npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static",
+    "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
     "copy-files": ""
   },
   "eslintConfig": {
@@ -81,6 +83,7 @@
     "@storybook/node-logger": "^6.1.21",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.1.21",
+    "cz-conventional-changelog": "3.3.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
@@ -90,5 +93,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/RabahZeineddine/Material-ui.git"
+  },
+  "homepage": "http://RabahZeineddine.github.io/Material-ui/",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
