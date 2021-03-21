@@ -16,8 +16,7 @@
             "@semantic-release/git",
             {
                 "assets": [
-                    "package.json",
-                    "npm-shrinkwrap.json"
+                    "package.json"
                 ]
             }
         ]
