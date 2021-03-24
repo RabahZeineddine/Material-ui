@@ -35,9 +35,10 @@ export function PersistentDrawer(props: PersistentDrawerType) {
 
   const history = useHistory();
 
-  const handlePageChange = (val: string) => {
+  const handlePageChange = (val: string, label: string) => {
     history.push(`/${val}`);
     setPage(val);
+    setTitle(label);
   };
 
   const handleDrawerOpen = () => {
@@ -48,6 +49,7 @@ export function PersistentDrawer(props: PersistentDrawerType) {
     setOpen(false);
   };
   const [page, setPage] = React.useState(params.page);
+  const [title, setTitle] = React.useState("");
 
   useEffect(() => {
     const pages = React.Children.toArray(props.children);
@@ -55,6 +57,7 @@ export function PersistentDrawer(props: PersistentDrawerType) {
       const firstPage = pages[0];
       if (React.isValidElement(firstPage)) {
         setPage(firstPage.props.id);
+        setTitle(firstPage.props.label);
       }
       const selectedPage = pages.find((page) => {
         if (React.isValidElement(page)) {
@@ -62,8 +65,10 @@ export function PersistentDrawer(props: PersistentDrawerType) {
         }
         return null;
       });
-      if (selectedPage && React.isValidElement(selectedPage))
+      if (selectedPage && React.isValidElement(selectedPage)) {
         setPage(selectedPage?.props?.id || "");
+        setTitle(selectedPage?.props?.label || "");
+      }
     }
   }, []);
 
@@ -99,7 +104,7 @@ export function PersistentDrawer(props: PersistentDrawerType) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            {props.title || page}
+            {props.title || title}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -134,7 +139,7 @@ export function PersistentDrawer(props: PersistentDrawerType) {
               <ListItem
                 key={index}
                 button
-                onClick={() => handlePageChange(id)}
+                onClick={() => handlePageChange(id, label)}
                 selected={page === id}
               >
                 <ListItemIcon>{Icon ? <Icon /> : ""}</ListItemIcon>
