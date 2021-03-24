@@ -135,7 +135,7 @@ function Table(props: TablePropsType) {
   const noDataRow = (params: any) =>
     props.loading ? (
       <DxTable.Row {...params}>
-        <td colSpan={props.columns.length}>
+        <td colSpan={20}>
           <ListSkeletons items={10} />
         </td>
       </DxTable.Row>

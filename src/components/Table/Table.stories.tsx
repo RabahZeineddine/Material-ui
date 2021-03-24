@@ -26,7 +26,14 @@ Default.args = {
       format: (value) => Helper.getFormattedDate(value),
     },
   ],
-  rows: [],
+  rows: [
+    {
+      column1: "Row 1",
+      withWidth: "this cell has inital width",
+      nested: { value: "Nested 1" },
+      dateColumn: new Date(),
+    },
+  ],
 };
 
 export default {
