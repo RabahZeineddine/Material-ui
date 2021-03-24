@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TableGroupingContentType } from "config/@types/Table";
+import { TableGroupingContentType } from "../../../config/@types/Table";
 
 function TableGroupingContent(props: TableGroupingContentType) {
   const [value] = useState(props.row.value);

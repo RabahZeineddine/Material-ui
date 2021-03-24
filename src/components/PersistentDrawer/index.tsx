@@ -21,7 +21,7 @@ import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import { useHistory, useParams } from "react-router-dom";
 import style from "./style";
-import { PersistentDrawerType } from "config/@types/PersistentDrawer";
+import { PersistentDrawerType } from "../../config/@types/PersistentDrawer";
 import DrawerPage from "./DrawerPage";
 
 const useStyles = makeStyles(style);

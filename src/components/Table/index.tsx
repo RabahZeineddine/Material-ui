@@ -35,10 +35,10 @@ import {
   PagingPanel,
   TableEditColumn,
 } from "@devexpress/dx-react-grid-material-ui";
-import ListSkeletons from "components/Skeletons/ListSkeletons";
-import Helper from "utils/Helper";
+import ListSkeletons from "../Skeletons/ListSkeletons";
+import Helper from "../../utils/Helper";
 import { saveAs } from "file-saver";
-import { TablePropsType, TableColumn } from "config/@types/Table";
+import { TablePropsType, TableColumn } from "../../config/@types/Table";
 import TableGroupingContent from "./GroupingTableContent";
 
 import TableToolbar from "./TableToolbar/index";
