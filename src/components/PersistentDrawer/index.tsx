@@ -151,8 +151,8 @@ export function PersistentDrawer(props: PersistentDrawerType) {
             if (React.isValidElement(child)) {
               const { id, component: Component } = child.props;
               if (page === id) return <Component key={index} />;
-              return null;
             }
+            return null;
           })}
         </Grid>
       </main>
