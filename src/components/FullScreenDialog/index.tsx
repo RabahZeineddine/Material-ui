@@ -10,6 +10,7 @@ import Slide from "@material-ui/core/Slide";
 import { TransitionProps } from "@material-ui/core/transitions";
 import style from "./style";
 import { FullScreenDialogProps } from "../../config/@types/FullScreenDialog";
+import { DialogContent } from "@material-ui/core";
 
 const useStyles = makeStyles(style);
 
@@ -52,7 +53,7 @@ function FullScreenDialog(props: FullScreenDialogProps) {
             </Typography>
           </Toolbar>
         </AppBar>
-        {props.children}
+        <DialogContent>{props.children}</DialogContent>
       </Dialog>
     </div>
   );
