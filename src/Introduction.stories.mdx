@@ -37,6 +37,35 @@ import { Table } from '@rabahzeineddine/Material-ui'
 
 > For more information check the [Table Documentation](src/components/Table.stories.tsx?path=/docs/table--default)
 
+#### PersistentDrawer
+
+```TSX
+import { PersistentDrawer, DrawerPage } from '@rabahzeineddine/Material-ui'
+import Component from 'Component' // Your component
+import Icon from 'Icon' // Component Icon
+
+<PersistentDrawer title={"Drawer"}>
+    <DrawerPage component={Component} id="componentId" label="Component" icon={Icon} />
+    <DrawerPage component={Component} id="componentId" label="Component" icon={Icon} />
+</PersistentDrawer>
+```
+
+> For more information check the [Persistent Drawer Documentation](src/components/PersistentDrawer.stories.tsx?path=/docs/persistent-drawer--default)
+
+
+#### FullScreenDialog
+
+```TSX
+import { FullScreenDialog } from '@rabahzeineddine/Material-ui'
+
+<FullScreenDialog title={"Dialog title"} closeDialog={handleClose}>
+    <div>Dialog Content</div>
+</FullScreenDialog>
+```
+
+> For more information check the [Full screen dialog Documentation](src/components/PersistentDrawer.stories.tsx?path=/docs/full-screen-dialog--default)
+
+
 ## Github repository
 
 Check the [Github repository](https://github.com/RabahZeineddine/Material-ui.git)

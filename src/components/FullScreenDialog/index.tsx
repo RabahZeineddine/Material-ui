@@ -35,7 +35,7 @@ function FullScreenDialog(props: FullScreenDialogProps) {
         fullScreen
         open={open}
         onClose={handleClose}
-        onExit={props.closeDialog}
+        onExited={props.closeDialog}
         TransitionComponent={Transition}
       >
         <AppBar className={classes.appBar}>
