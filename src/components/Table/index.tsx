@@ -79,6 +79,7 @@ function Table(props: TablePropsType) {
         name: column.name,
         title: column.title,
         getCellValue: column.getCellValue,
+        format: column.format,
       } as Column)
   );
 
@@ -185,10 +186,11 @@ function Table(props: TablePropsType) {
             onPageSizeChange={setPageSize}
           />
         )}
-        {props.showPaging && <IntegratedPaging />}
+
         <IntegratedSorting />
         {props.grouping && <IntegratedGrouping />}
         {filtersToggle && <IntegratedFiltering />}
+        {props.showPaging && <IntegratedPaging />}
         {props.showTableEditColumn && (
           <EditingState onCommitChanges={commitChanges} />
         )}
