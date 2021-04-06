@@ -60,6 +60,31 @@ import { FullScreenDialog } from '@rabahzeineddine/Material-ui'
 
 > For more information check the [Full screen dialog Documentation](src/components/FullScreenDialog/README.md)
 
+#### SubmitButton
+
+```TSX
+import { SubmitButton } from '@rabahzeineddine/Material-ui'
+
+<SubmitButton label="Submit" loading={loading}>
+```
+
+> For more information check the [Full screen dialog Documentation](src/components/SubmitButton/README.md)
+
+#### Tabs
+
+```TSX
+import { Tabs, Tab } from '@rabahzeineddine/Material-ui'
+import Information from 'Information'
+import Addresses from 'Addresses'
+
+<Tabs fullWidth>
+    <Tab label="Information" component={Information} />
+    <Tab label="Addresses" component={Addresses} />
+</Tabs>
+```
+
+> For more information check the [Full screen dialog Documentation](src/components/Tabs/README.md)
+
 ## Demos of the package in action
 
 Check the [Storybook page](https://rabahzeineddine.github.io/Material-ui/)
